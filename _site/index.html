@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 
 <head>
-  <meta charset="UTF-8">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+ <meta property="og:title" content="{{ page.title }}" />
+ <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}" />
+{% if page.description %}
+ <meta property="og:description" content="{{ page.description }}" />
+{% else %}
+ <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}" />
+{% endif %}
   <title>Trigger-FK.github.io | </title>
   <!-- Normalize.css -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
