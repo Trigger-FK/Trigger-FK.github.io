@@ -146,6 +146,13 @@
   left: 0; /* メニューを画面に入れる */
 }
 
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 180%;
+  word-break: break-all;
+}
+
 a {
   color: rgb(47, 135, 167);
 }
