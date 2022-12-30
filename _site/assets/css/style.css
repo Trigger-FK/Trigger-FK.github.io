@@ -1,0 +1,315 @@
+@charset "UTF-8";
+.page__date, .page__description, .archive__date {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 1em;
+}
+
+.about {
+  display: flex;
+}
+.about .image {
+  width: 280px;
+  height: 280px;
+  position: relative;
+}
+.about .right {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+.about .title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: normal;
+}
+.about .text {
+  margin: 0;
+  padding: 0;
+  line-height: 180%;
+  word-break: break-all;
+}
+.about ul, .about ol {
+  color: #3e3e41;
+  border-top: solid #504c4c 1px; /*上のボーダー*/
+  border-bottom: solid #504c4c 1px; /*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.about ul li, .about ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.activity .title {
+  padding: 1rem 2rem;
+  border-left: 5px solid #000;
+  background: #f4f4f4;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: normal;
+}
+.activity .sub {
+  margin: 0 5 0 0px;
+  padding: 0;
+  font-size: 18px;
+  line-height: normal;
+}
+.activity .text {
+  margin: 0 1em;
+  padding: 0;
+  line-height: 180%;
+  word-break: break-all;
+}
+.activity ul li, .activity ol li {
+  margin: 0 1em;
+  line-height: 1;
+  padding: 0.5em 0;
+}
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: 0.5s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0; /* メニューを画面に入れる */
+}
+
+a {
+  color: rgb(47, 135, 167);
+}
+a:hover {
+  color: rgb(47, 135, 167);
+}
+
+body {
+  color: #333;
+}
+
+h2 {
+  margin: 2em 0 1.5em 0;
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+.archive {
+  padding: 4% 0;
+  border-bottom: 1px solid #ccc;
+}
+.archive__title {
+  margin: 0;
+}
+.archive__title a {
+  color: #333;
+  text-decoration: none;
+}
+.archive__excerpt {
+  font-size: 14px;
+  color: #666;
+  margin-top: 1em;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.copyright {
+  margin-bottom: 0;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  padding: 4% 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.front-page {
+  padding: 4% 0;
+}
+
+.nav {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav__item {
+  margin-right: 1em;
+}
+.nav__item a {
+  display: block;
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+  padding: 15px 10px;
+  font-size: 1em;
+}
+
+.page__header {
+  border-bottom: 1px solid #ccc;
+  padding: 4% 0;
+}
+.page__title {
+  margin: 0;
+  font-family: "Comic Sans MS";
+  font-size: 28px;
+}
+@media screen and (min-width: 800px) {
+  .page__title {
+    font-size: 28px;
+  }
+}
+.page__body {
+  padding: 4% 0;
+}
+.site-title {
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  padding: 4% 0;
+}
+@media screen and (min-width: 800px) {
+  .site-title {
+    font-size: 20px;
+  }
+}
+.site-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.pager {
+  padding: 4% 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pager__item a, .pager__item--next a, .pager__item--prev a {
+  text-decoration: none;
+}
+.pager__item--prev {
+  margin-left: auto;
+}
+.pager__item--next {
+  margin-right: auto;
+}
+
+.pagination {
+  padding: 4% 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pagination__item {
+  margin-right: 4px;
+  text-decoration: none;
+  display: block;
+  padding: 7px 16px;
+  border: 1px solid #ccc;
+}
+.pagination .current {
+  background: rgb(37, 111, 153);
+  border-color: rgb(37, 111, 153);
+  color: white;
+}
+
+.social-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-link__item {
+  font-size: 1.5em;
+}
+.social-link__item a {
+  color: #666;
+  display: block;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

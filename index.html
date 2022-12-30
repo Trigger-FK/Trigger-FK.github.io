@@ -4,8 +4,7 @@ layout: default
 
 <div class="contents front-page">
   <div class="container">
-
-    <!-- 記事一覧 -->
+    
     {% for post in site.posts %}
       <article class="archive">
         <h2 class="archive__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -13,7 +12,6 @@ layout: default
         <div class="archive__excerpt">{{ post.excerpt }}</div>
       </article>
     {% endfor %}
-
-
+    
   </div><!--container-->
-</div><!--main-->
+</div><!--contents-->
