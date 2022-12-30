@@ -1,0 +1,21 @@
+title: Trigger-FK.github.io
+description: >
+  
+baseurl: ""
+url: ""
+
+author:
+  name: Zakimatsu
+  # email: mail@examples.com
+  github: Trigger-FK
+  twitter: santana_hammer
+
+paginate: 3
+paginate_path: "page:num"
+
+sass:
+  style: expanded
+
+gems:
+  - jekyll-paginate
+  - jekyll-feed
