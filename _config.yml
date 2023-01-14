@@ -10,7 +10,7 @@ author:
   github: Trigger-FK
   twitter: santana_hammer
 
-paginate: 3
+paginate: 5
 paginate_path: "page:num"
 
 sass:
