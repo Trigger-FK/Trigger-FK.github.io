@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #323638;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+
+    &__sitetitle{
+        margin: 16px;
+        font-weight: bold;
+        font-family: 'Comic Sans MS';
+      
+        @include breakpoint(){
+          font-size: 20px;
+        }
+    }
+
+    &__sitetitle a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    margin-top: 60px;
+    background: #242424;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner p img{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
