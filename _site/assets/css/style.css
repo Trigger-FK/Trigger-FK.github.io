@@ -6,20 +6,30 @@
   margin-top: 1em;
 }
 
-.about .image {
-  width: 280px;
-  height: 280px;
+.about p.img_center {
   text-align: center;
+}
+.about img {
+  width: 300px;
+  height: 300px;
 }
 .about .right {
   margin: 0 0 0 20px;
   padding: 0;
 }
-.about .title {
-  margin: 0;
+.about .right li {
+  font-size: 18px;
+}
+.about .name {
+  margin: 40px 0px 0px 0px;
   padding: 0;
   font-weight: bold;
   font-size: 24px;
+  line-height: normal;
+}
+.about .detail {
+  margin: 10px 5px 0px 0px;
+  padding: 0;
   line-height: normal;
 }
 .about .text {
@@ -165,11 +175,10 @@ body {
 
 .header {
   display: block;
-  margin: 0 auto;
   width: 100%;
   max-width: 100%;
   box-shadow: none;
-  background-color: #323638;
+  background-color: #275886;
   position: fixed;
   height: 60px !important;
   overflow: hidden;
@@ -179,24 +188,63 @@ body {
   margin: 16px;
   font-weight: bold;
   font-family: "Comic Sans MS";
+  text-align: center;
 }
 @media screen and (min-width: 800px) {
   .header__sitetitle {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 .header__sitetitle a {
   color: #ffffff;
   text-decoration: none;
 }
+.header__description {
+  color: #ffffff;
+  margin: 16px;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 800px) {
+  .header__description {
+    font-size: 24px;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+
+.mainInner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.mainInner div {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
 
 #sidebarMenu {
   height: 100%;
   position: fixed;
   left: 0;
-  width: 200px;
+  width: 250px;
   margin-top: 60px;
-  background: #242424;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: linear-gradient(180deg, #275886 0%, #2c2c2c 100%);
 }
 
 .sidebarMenuInner {
@@ -229,12 +277,88 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.sidebarMenuInner li a {
+.sidebarMenuInner a {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+}
+
+input[type=checkbox]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type=checkbox] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 22px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
+}
+
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
 }
 
 a {
@@ -248,6 +372,15 @@ body {
   color: #333;
 }
 
+h1 {
+  margin: 2em 0 1.5em 0;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
 h2 {
   margin: 2em 0 1.5em 0;
   font-size: 20px;
@@ -255,6 +388,17 @@ h2 {
 @media screen and (min-width: 800px) {
   h2 {
     font-size: 24px;
+  }
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 20px;
   }
 }
 
@@ -328,13 +472,13 @@ p {
 }
 
 .page__title {
-  margin: 0;
+  margin: 100px 0px 0px 0px;
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 40px;
 }
 @media screen and (min-width: 800px) {
   .page__title {
-    font-size: 28px;
+    font-size: 40px;
   }
 }
 .page__body {

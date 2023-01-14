@@ -20,12 +20,29 @@ body{
   color: $font-color;
 }
 
+h1{
+  margin: 2em 0 1.5em 0;
+  @include breakpoint(){
+    font-size: 28px;
+  }
+}
+
 h2{
   margin: 2em 0 1.5em 0;
   font-size: 20px;
 
   @include breakpoint(){
     font-size: 24px;
+  }
+}
+
+h3{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
+
+  @include breakpoint(){
+    font-size: 20px;
   }
 }
 
@@ -112,12 +129,12 @@ p{
 
 .page{
   &__title{
-    margin: 0;
+    margin: 100px 0px 0px 0px;
     font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 40px;
 
     @include breakpoint(){
-      font-size: 28px;
+      font-size: 40px;
     }
   }
 
