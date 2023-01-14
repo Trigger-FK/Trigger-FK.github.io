@@ -18,14 +18,15 @@
   padding: 0;
 }
 .about .right li {
-  font-size: 18px;
+  font-size: 16px;
 }
 .about .name {
-  margin: 40px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 0;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   line-height: normal;
+  text-align: center;
 }
 .about .detail {
   margin: 10px 5px 0px 0px;
@@ -61,16 +62,17 @@
   margin: 0 5 0 0px;
   padding: 0;
   font-size: 18px;
+  font-weight: bold;
   line-height: normal;
 }
 .activity .text {
-  margin: 0 1em;
-  padding: 0;
+  margin-bottom: 1em;
+  padding: 0 20px;
   line-height: 180%;
   word-break: break-all;
 }
 .activity ul li, .activity ol li {
-  margin: 0 1em;
+  margin: 0 0.5em;
   line-height: 1;
   padding: 0.5em 0;
 }
@@ -422,10 +424,7 @@ body {
   padding: 4% 0;
   border-bottom: 1px solid #ccc;
 }
-.archive__title {
-  margin: 40 0 0 0px;
-}
-.archive__title a {
+.archive a {
   color: #333;
   text-decoration: none;
 }
@@ -438,11 +437,11 @@ body {
 .page__title {
   margin: 100px 0px 0px 0px;
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 36px;
 }
 @media screen and (min-width: 800px) {
   .page__title {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 .page__body {
@@ -523,7 +522,7 @@ body {
 @media screen and (min-width: 769px) {
   h2 {
     margin: 2em 0 1.5em 0;
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 769px) and (min-width: 800px) {
@@ -550,45 +549,55 @@ body {
     word-break: break-all;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media screen and (min-width: 769px) {
+  .archive__title {
+    margin: 40 0 0 0px;
+  }
+}
+@media only screen and (max-width: 641px) {
   h1 {
     margin: 1.5em 0 1em 0;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) and (min-width: 800px) {
+@media only screen and (max-width: 641px) and (min-width: 800px) {
   h1 {
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (max-width: 641px) {
   h2 {
     margin: 1.5em 0 1em 0;
     font-size: 18px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) and (min-width: 800px) {
+@media only screen and (max-width: 641px) and (min-width: 800px) {
   h2 {
     font-size: 24px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (max-width: 641px) {
   h3 {
     margin-top: 40px;
     margin-bottom: 10px;
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) and (min-width: 800px) {
+@media only screen and (max-width: 641px) and (min-width: 800px) {
   h3 {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (max-width: 641px) {
   p {
     margin: 1em 0 1em 0;
     line-height: 16px;
     font-size: 14px;
     word-break: break-all;
+  }
+}
+@media only screen and (max-width: 641px) {
+  .archive__title {
+    margin: 60 0 0 0px;
   }
 }
 

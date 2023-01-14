@@ -12,14 +12,15 @@
         padding: 0;
     }
     .right li{
-      font-size: 18px;
+      font-size: 16px;
     }
     .name{
-        margin: 40px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
         padding: 0;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 28px;
         line-height: normal;
+        text-align: center;
     }
     .detail{
         margin: 10px 5px 0px 0px;
@@ -58,16 +59,17 @@
       margin: 0 5 0 0px;
       padding: 0;
       font-size: 18px;
+      font-weight: bold;
       line-height: normal;
     }
     .text{
-      margin: 0 1em;
-      padding: 0;
+      margin-bottom: 1em;
+      padding: 0 20px;
       line-height: 180%;
       word-break: break-all;
   }
     ul li, ol li {
-      margin: 0 1em;
+      margin: 0 0.5em;
       // list-style: none;
       line-height: 1;
       padding: 0.5em 0;

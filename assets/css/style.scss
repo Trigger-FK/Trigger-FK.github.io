@@ -71,16 +71,10 @@ body{
 .archive{
   @include pad();
   border-bottom: $border;
-
-  &__title{
-    margin: 40 0 0 0px;
-
     a{
       color: $font-color;
       text-decoration: none;
     }
-  }
-
   &__date{
     @extend %meta;
   }
@@ -96,10 +90,10 @@ body{
   &__title{
     margin: 100px 0px 0px 0px;
     font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 36px;
 
     @include breakpoint(){
-      font-size: 40px;
+      font-size: 36px;
     }
   }
 
@@ -203,7 +197,7 @@ body{
   
   h2{
     margin: 2em 0 1.5em 0;
-    font-size: 20px;
+    font-size: 24px;
   
     @include breakpoint(){
       font-size: 24px;
@@ -225,9 +219,15 @@ body{
     line-height: 1.8;
     word-break: break-all;
   }
+
+  .archive{
+    &__title{
+    margin: 40 0 0 0px;
+    }
+  }
 }
 
-@media only screen and (min-width: 641px) and (max-width: 960px) {
+@media only screen and (max-width: 641px){
   h1{
     margin: 1.5em 0 1em 0;
     @include breakpoint(){
@@ -259,5 +259,10 @@ body{
     line-height: 16px;
     font-size: 14px;
     word-break: break-all;
+  }
+  .archive{
+    &__title{
+    margin: 60 0 0 0px;
+    }
   }
 }
