@@ -1,22 +1,31 @@
 .about {
     // display: flex;
-    .image{
-        width: 280px;
-        height: 280px;
-        text-align: center;
+    p.img_center{
+      text-align: center;
+    }
+    img{
+        width: 300px;
+        height: 300px;
     }
     .right{
         margin: 0 0 0 20px;
         padding: 0;
     }
-    .title{
-        margin: 0;
+    .right li{
+      font-size: 18px;
+    }
+    .name{
+        margin: 40px 0px 0px 0px;
         padding: 0;
         font-weight: bold;
         font-size: 24px;
         line-height: normal;
     }
-    
+    .detail{
+        margin: 10px 5px 0px 0px;
+        padding: 0;
+        line-height: normal;
+    }
     .text{
         margin: 0;
         padding: 0;
