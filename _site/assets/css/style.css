@@ -5,13 +5,10 @@
   margin-top: 1em;
 }
 
-.about {
-  display: flex;
-}
 .about .image {
   width: 280px;
   height: 280px;
-  position: relative;
+  text-align: center;
 }
 .about .right {
   margin: 0 0 0 20px;
@@ -176,7 +173,7 @@ h2 {
 
 p {
   margin: 0 0 1em 0;
-  line-height: 180%;
+  line-height: 1.8;
   word-break: break-all;
 }
 
@@ -249,7 +246,7 @@ p {
 }
 .page__title {
   margin: 0;
-  font-family: "Comic Sans MS";
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
   font-size: 28px;
 }
 @media screen and (min-width: 800px) {
